@@ -3,33 +3,17 @@ import PropTypes from 'prop-types';
 import { Route, Switch, withRouter } from 'react-router-dom';
 
 import {
-  AccessScreen,
-  AccountScreen,
-  ClientsScreen,
-  FilesScreen,
-  RegimesScreen,
-  ReportsScreen,
+  EmployeesScreen,
+  PlacesScreen,
   RolesScreen,
+  MachinesScreen,
   UsersScreen,
-  BalancesScreen,
   InitialScreen,
 } from '../../Screens';
 
 const SubRouter = ({ match: { url }, locations }) => {
   return (
     <Switch>
-      <Route
-        component={AccessScreen}
-        exact
-        location={locations}
-        path={`${url}/access`}
-      />
-      <Route
-        component={AccountScreen}
-        exact
-        location={locations}
-        path={`${url}/accounts`}
-      />
       <Route
         component={UsersScreen}
         exact
@@ -43,10 +27,10 @@ const SubRouter = ({ match: { url }, locations }) => {
         path={`${url}`}
       />
       <Route
-        component={RegimesScreen}
+        component={PlacesScreen}
         exact
         location={locations}
-        path={`${url}/regimes`}
+        path={`${url}/places`}
       />
       <Route
         component={RolesScreen}
@@ -55,28 +39,17 @@ const SubRouter = ({ match: { url }, locations }) => {
         path={`${url}/roles`}
       />
       <Route
-        component={ClientsScreen}
+        component={EmployeesScreen}
         exact
         location={locations}
-        path={`${url}/clients`}
+        path={`${url}/employees`}
       />
+
       <Route
-        component={FilesScreen}
+        component={MachinesScreen}
         exact
         location={locations}
-        path={`${url}/files`}
-      />
-      <Route
-        component={BalancesScreen}
-        exact
-        location={locations}
-        path={`${url}/balances`}
-      />
-      <Route
-        component={ReportsScreen}
-        exact
-        location={locations}
-        path={`${url}/reports`}
+        path={`${url}/machines`}
       />
     </Switch>
   );

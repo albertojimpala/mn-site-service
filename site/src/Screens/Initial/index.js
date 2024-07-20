@@ -67,51 +67,6 @@ export const InitialScreen = () => {
           <h3>{`Bienvenido ${user.full_name}`}</h3>
         </Col>
       </Row>
-      <Row>
-        <Col span={12}>
-          <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
-            <Card title="Grafico de No. de Clientes " size="small">
-              {loading ? (
-                <Pie data={getValues()} />
-              ) : (
-                <div className="example">
-                  <Spin tip="Cargando..." size="large">
-                    <div className="content" />
-                  </Spin>
-                </div>
-              )}
-            </Card>
-          </Space>
-        </Col>
-        <Col span={12}>
-          <Card title="Estadisticas" size="small">
-            <Col span={10}>
-              <Card bordered={false}>
-                <Statistic
-                  title="Clientes Activos"
-                  value={getStatics(1)}
-                  precision={2}
-                  valueStyle={{ color: '#3f8600' }}
-                  prefix={<ArrowUpOutlined />}
-                  suffix="%"
-                />
-              </Card>
-            </Col>
-            <Col span={10}>
-              <Card bordered={false}>
-                <Statistic
-                  title="Clientes Inactivos"
-                  value={getStatics(2)}
-                  precision={2}
-                  valueStyle={{ color: '#cf1322' }}
-                  prefix={<ArrowDownOutlined />}
-                  suffix="%"
-                />
-              </Card>
-            </Col>
-          </Card>
-        </Col>
-      </Row>
     </div>
   );
 };

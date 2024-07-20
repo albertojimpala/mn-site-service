@@ -1,1 +1,1 @@
-export const getServer = () => 'http://haylex.mx:3030';
+export const getServer = () => 'http://localhost:3030';
