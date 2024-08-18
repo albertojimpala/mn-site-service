@@ -1,1 +1,2 @@
-export const getServer = () => 'http://localhost:3030';
+export const getServer = () =>
+  'https://mn-api-service-production.up.railway.app';
